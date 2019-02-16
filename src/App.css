@@ -15,6 +15,10 @@
   border-radius: 50%;
 }
 
+.article {
+  padding: 15px;
+}
+
 .App-header {
   flex: 9;
   display: flex;
