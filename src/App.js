@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from './logo.png';
 
 class App extends Component {
   state = {
-    data: "Under construction \u{1F440} \u{1F6E0} \u{2728} ",
+    data: "Actual Status: Fighting laziness to finish this page, someday. \u{1F440} \u{1F6E0} ",
+    logoURL: logo,
     title: "Djigo.io",
     content: "",
     author: "Antonio Djigo",
@@ -35,11 +37,14 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <img className="App-logo" src={this.state.logoURL} alt="" />
           <h1 className="title">{this.state.title}</h1>
           <p className="article"> {this.state.data} </p>
-          <p className="article"> Blame {this.state.author}. </p>
           <p className="article"> {this.state.content} </p>
         </header>
+        <footer className="App-footer">
+          <p className="article"> Blame {this.state.author} @ <a className="App-link" href="https://github.com/DjigoLab">Github</a> or <a className="App-link" href="https://twitter.com/Brownio_">Twitter</a> </p>
+        </footer>
       </div>
     );
   }
