@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   state = {
-    data: "Loading...",
-    title: "",
+    data: "Under construction \u{1F440} \u{1F6E0} \u{2728} ",
+    title: "Djigo.io",
     content: "",
-    author: "",
+    author: "Antonio Djigo",
 
   }
   // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
@@ -36,19 +35,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="title">{this.state.title}</h1>
           <p className="article"> {this.state.data} </p>
-          <p className="article"> {this.state.author} </p>
+          <p className="article"> Blame {this.state.author}. </p>
           <p className="article"> {this.state.content} </p>
-
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
       </div>
     );
